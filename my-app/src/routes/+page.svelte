@@ -561,7 +561,7 @@
     }
 
     :root {
-        --main-color: #ba1019;
+        --main-color: yellow;
         --background-color: #24262b;
         --secondary-color: rgb(0, 115, 255);
     }
