@@ -99,7 +99,7 @@
             </section>
             <section>
                 <div class="butik-info">
-                    <h1>Effektiv Håltagningsprocess, kvalitativa Hydraulslangar, lämpliga Oljor och Smörjmedel</h1>
+                    <h1>Effektiv <span>Håltagningsprocess</span>, kvalitativa <span>Hydraulslangar</span>, lämpliga <span>Oljor</span> och <span>Smörjmedel</span></h1>
                     <p>Vi på UL Maskin och Diamant är <span>lösningen</span>!</p>
                 </div>
                 <div class="blue-line">
@@ -164,6 +164,9 @@
     }
 
     .navbar {
+        z-index: 100;
+        position: sticky;
+        top: 0;
         background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(15px);
         width: 100%;
@@ -202,84 +205,9 @@
         display: none;
     }
 
-    /* Tjänster Sektion */
-    .tjanst {
-        background-color: #fef5ed;
-    }
-
-    .target-h1 {
-        padding: 100px 25px 29px;
-        margin: 0 10vw;
-    }
-
-    .target-h1, .target-h1 span {
-        color: black;
-        font-size: 42px;
-        font-weight: bold;
-        text-align: left;
-    }
-
-    .target-h1 span {
-        color: var(--main-color);
-    }
-    
-    #snabbt-om-oss {
-        padding: 0 25px 50px;
-        margin: 0 10vw;
-        font-size: 18px;
-    }
-
-    .tjanst-container {
-        display: flex;
-        padding: 50px;
-    }
-
-    .tjanster {
-        margin: 0 25px;
-        /* padding: 25px; */
-        border-radius: 10px;
-        background-color: white;
-        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
-        width: 300px;
-        overflow: hidden;
-    }
-
-    
-    .tjanster p {
-        margin-bottom: 25px;
-    }
-
-    .tjanster a {
-        color: var(--main-color);
-    }
-    
-    .tjanster a::after {
-        content: '';
-        width: 0;
-        height: 2px;
-        background-color: var(--main-color);
-        display: block;
-        transition: all 0.8s;
-        max-width: 56px;
-    }
-
-    .tjanster a:hover::after {
-        width: 100%;
-        max-width: 56px;
-    }
-
-    .img-tjanster {
-        
-    }
-
-    /* Erbjudande 100vh */
-    .erbjudande {
-        height: 100vh;
-        background-color: #fef5ed;
-    }
-
     /* Dropdown Menu */
     .dropdown_menu {
+        position: sticky;
         display: none;
         right: 2rem;
         top: 80px;
@@ -297,10 +225,108 @@
     }
 
     .dropdown_menu li {
+        position: sticky;
         padding: 0.7rem;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    /* Tjänster Sektion */
+    .target-h1 {
+        padding: 100px 25px 25px;
+        margin: 0 10vw;
+    }
+
+    .target-h1,
+    .target-h1 span {
+        color: black;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .target-h1 span {
+        color: var(--main-color);
+    }
+    
+    #snabbt-om-oss {
+        padding: 0 25px 50px;
+        margin: 0 10vw;
+        font-size: 18px;
+    }
+
+    .red-line {
+        margin: auto;
+        background: #ba1019;
+        height: 1px;
+        width: 20%;
+    }
+
+    .tjanst-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tjanst-container {
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0 0;
+        padding: 0 25px 0;
+        position: relative;
+    }
+
+    .img-tjanster {
+        z-index: 0;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
+        transform: translateX(-25px);
+        height: 50vh;
+        width: 65vw;
+        border-radius: 10px;
+        margin: auto;
+        background-image: url("./test.JPG");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .tjanster {
+        width: fit-content;
+        transform: translateY(-40px);
+        margin: auto;
+        padding: 25px;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .tjanster p {
+        margin-bottom: 25px;
+        max-width: 337.5px;
+    }
+
+    .tjanster a {
+        color: var(--main-color);
+        /* max-width: 2px; */
+    }
+
+    .tjanster a::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: var(--main-color);
+        display: block;
+        transition: all 0.8s;
+        max-width: 56px;
+    }
+
+    .tjanster a:hover::after {
+        width: 100%;
+        max-width: 56px;
+    }
+
+    /* Erbjudande 100vh */
+    .erbjudande {
+        height: 100vh;
+        background-color: #fef5ed;
     }
 
     /* About Section */
@@ -329,6 +355,50 @@
 
     .butik-info span {
         color: var(--secondary-color);
+    }
+
+    .butik-info {
+        padding: 75px 25px 0;
+        margin: 0 10vw
+    }
+
+    .butik-info h1 {
+        color: black;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: left;
+        margin: 0 0 25px;
+    }
+
+    .blue-line {
+        margin: auto;
+        background: var(--secondary-color);
+        height: 1px;
+        width: 20%;
+    }
+
+    .butik-info p {
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+
+    .butik-container {
+        background-color: #fef5ed;
+        padding: 0 15vw;
+    }
+
+    .butik-img {
+        z-index: 3;
+        background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5)), url("./butik-main.JPG");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
+        border-radius: 10px;
+        height: 85vh;
+        margin: auto;
+        margin-top: 50px;
+        overflow: hidden;
     }
 
     .butik-img-text a::after {
@@ -427,8 +497,7 @@
 
         .target-h1 {
             text-align: center;
-
-            padding: 100px 75px 0;
+            padding: 50px 75px 0;
             padding-bottom: 25px;
         }
 
@@ -461,20 +530,20 @@
 
         .img-tjanster {
             z-index: 0;
-            transform: translateX(-25px);
-            height: 280px;
-            width: 100vw;
-            background-image: url("./test.JPG");
             background-size: cover;
             background-position: center;
+            transform: translateX(-25px);
+            border-radius: 0px;
+            height: 280px;
+            width: 100vw;
         }
 
         .tjanster {
             width: fit-content;
             transform: translateY(-40px);
+            border-radius: 10px;
             margin: 0 0 25px;
             padding: 25px;
-            border-radius: 10px;
             background-color: white;
         }
 
@@ -490,10 +559,13 @@
         .butik-info {
             text-align: center;
             padding: 50px 75px 0;
+            margin: 0;
         }
 
         .butik-info h1 {
+            text-align: center;
             margin-bottom: 25px;
+            font-size: 25px;
         }
 
         .butik-info p {
@@ -547,7 +619,7 @@
         }
 
         .footer {
-            margin-top: 0;
+            margin-top: 25px;
         }
 
         .footer h4 {
