@@ -99,7 +99,7 @@
             </section>
             <section>
                 <div class="butik-info">
-                    <h1>Effektiv <span>Håltagningsprocess</span>, kvalitativa <span>Hydraulslangar</span>, lämpliga <span>Oljor</span> och <span>Smörjmedel</span></h1>
+                    <h1>Effektiv <span>Håltagningsprocess</span>, kvalitativa <span>Hydraulslangar</span>, lämpliga <span>Oljor</span> och <span>Smörjmedel</span>?</h1>
                     <p>Vi på UL Maskin och Diamant är <span>lösningen</span>!</p>
                 </div>
                 <div class="blue-line">
@@ -279,7 +279,7 @@
     .img-tjanster {
         z-index: 0;
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
-        transform: translateX(-25px);
+        transform: translateX(0px);
         height: 50vh;
         width: 65vw;
         border-radius: 10px;
@@ -379,7 +379,7 @@
 
     .butik-info p {
         margin-bottom: 50px;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .butik-container {
@@ -398,6 +398,7 @@
         height: 85vh;
         margin: auto;
         margin-top: 50px;
+        margin-bottom: 25px;
         overflow: hidden;
     }
 
@@ -408,12 +409,34 @@
         background-color: var(--secondary-color);
         display: block;
         transition: all 0.8s;
-        max-width: 117px;
+        max-width: 145px;
     }
 
     .butik-img-text a:hover::after {
         width: 100%;
-        max-width: 117px;
+        max-width: 145px;
+    }
+
+    .butik-img-text {
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px);
+        margin: 50vh 20px;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .butik-img-text span {
+        color: var(--secondary-color);
+    }
+
+    .butik-img-text p {
+        font-size: 20px;
+        margin: 10px 0 25px;
+    }
+
+    .butik-img-text a {
+        color: var(--secondary-color);
+        font-size: 20px;
     }
 
     /* Back to topp */
@@ -434,7 +457,7 @@
         margin-bottom: 25px;
         width: 100%;
         text-align: center;
-        margin-top: 50px;
+        margin-top: 25px;
     }
 
     .footer h4 {
@@ -445,6 +468,11 @@
     .footer .maker {
         margin: 25px 0;
         font-weight: bold;
+    }
+
+    .footer a {
+        text-decoration: underline;
+        color: var(--main-color);
     }
 
     .footer p {
@@ -571,6 +599,7 @@
         .butik-info p {
             text-align: center;
             margin-bottom: 50px;
+            font-size: medium;
         }
 
         .butik-container {
@@ -588,7 +617,7 @@
             border-radius: 10px;
             height: 65vh;
             padding: 100% 25px 0;
-            margin: 50px 0;
+            margin: 50px 0 25px;
             overflow: hidden;
         }
 
@@ -596,6 +625,7 @@
             background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(15px);
             padding: 10px;
+            margin: 0;
             border-radius: 10px;
         }
 
@@ -605,10 +635,27 @@
 
         .butik-img-text p {
             margin: 10px 0 25px;
+            font-size: medium;
         }
 
         .butik-img-text a {
             color: var(--secondary-color);
+            font-size: medium;
+        }
+
+        .butik-img-text a::after {
+            content: '';
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            display: block;
+            transition: all 0.8s;
+            max-width: 117px;
+        }
+
+        .butik-img-text a:hover::after {
+            width: 100%;
+            max-width: 117px;
         }
 
         .blue-line {
