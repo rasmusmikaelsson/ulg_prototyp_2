@@ -16,130 +16,130 @@
 </script>
 
 <main>
-    <div>
-        <header>
-            <div class="navbar">
-                <div class="logo"><a href="/">Umeå Logistikgrupp <span>AB</span>.</a></div>
-                <ul class="links">
-                    <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
-                    <li><a href="/fonsterputts-info">Bilder </a><i class="fa-regular fa-image" style="color: var(--main-color);"></i></li>
-                    <li><a href="/hacktrimning-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
-                    <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
-                </ul>
-                <div on:click={() => {openMenu(); setCross()}} class="toggle_btn">
-                    <i class="fa-duotone fa-bars-sort" class:fa-xmark={replaceCross} />
-                </div>
-            </div>
-            <div style="z-index: 1000; position: absolute;" class="dropdown_menu" class:open={openBool}>
-                <li><a href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
-                <li><a href="/fonsterputts-info">Bilder <i class="fa-regular fa-image" style="color: var(--main-color);"></i></a></li>
-                <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
-                <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
-                <li><a href="/kontakta">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
-                
-            </div>
-            <section class="about">
-                <div class="about-us">
-                    <h1>Välkommen till Umeå Logistikgrupp <span id="big-text">AB</span> | Allt för <span id="big-text">Fastigheten</span></h1>
-                </div>
-            </section>
-        </header>
-        <div id="erbjudanden" class="erbjudande">
-            <section class="tjanst">
-                <h1 class="target-h1">Ett urval av våra <span>Tjänster</span></h1>
-                <p id="snabbt-om-oss">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo recusandae eveniet fugiat nihil vitae optio eaque corporis numquam. Perferendis!
-                </p>
-                <div class="red-line" id="red-line">
-                    <span></span>
-                </div>
-                <div class="tjanst-container">
-                    <div class="img-tjanster" style="background-image: url(./sandning-main.JPG);"></div>
-                    <div class="tjanster">
-                        
-                         <h1>Sandning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
-                         <p>
-                            Vi erbjuder sandning av fastigheter, vägar etc..
-                         </p>
-                         <a href="/fonsterputts-info">Läs mer</a>
-                    </div>
-                    <div class="img-tjanster" style="background-image: url(./sopning-main.png);"></div>
-                    <div class="tjanster">
-                        <h1>Sopning <i class="fa-duotone fa-broom" style="color: var(--main-color);"></i></h1>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
-                        </p>
-                        <a href="/hacktrimning-info">Läs mer</a>
-                    </div>
-                    <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
-                    <div class="tjanster">
-                        <h1>Bemanning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
-                        <p>
-                            Vi erbjuder personal inom fastighetsskötsel till samtliga av våra tjänster för uthyrning.
-                        </p>
-                        <a href="/takskottning-info">Läs mer</a>
-                    </div>
-                    <div class="img-tjanster" style="background-image: url(./snorojning-main.JPG);"></div>
-                    <div class="tjanster">
-                        <h1>Snöröjning <i class="fa-duotone fa-snowplow" style="color: var(--main-color);"></i></h1>
-                        <p>
-                            Vi tillhandahåller traktorer och personal för snöröjning av fastigheter, vägar etc.
-                        </p>
-                        <a href="/takskottning-info">Läs mer</a>
-                    </div>
-                    <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
-                    <div class="tjanster">
-                        <h1>Transporter <i class="fa-duotone fa-truck-moving" style="color: var(--main-color);"></i></h1>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
-                        </p>
-                        <a href="/takskottning-info">Läs mer</a>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="butik-info">
-                    <h1>Effektiv <span>Håltagningsprocess</span>, kvalitativa <span>Hydraulslangar</span>, lämpliga <span>Oljor</span> och <span>Smörjmedel</span>?</h1>
-                    <p>Vi på UL Maskin och Diamant är <span>lösningen</span>!</p>
-                </div>
-                <div class="blue-line">
-                    <span></span>
-                </div>
-                <div class="butik-container">
-                    <div class="butik-img">
-                        <div class="butik-img-text">
-                            <h1><span>UL</span> Maskin och Diamant</h1>
-                            <p>Vi pressar dina hydralslangar, återförsäljare av Tyrolit samt att du även hittar dina oljor och smörjmedel från PAYBACK LUBRICANTS hos oss.</p>
-                            <a href="http://ulmaskinodiamant.se/" target="_blank">Besök vår butik!</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="back-container">
-                <a href="/" class="back"><i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i> Till Toppen <i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i></a>
-            </div>
-            <section class="footer">
-                <h4>Följ oss på sociala medier!</h4>
-                <p>Se våra nyaste uppdateringar på FaceBook och Instagram</p>
-                <div class="sociala-medier">
-                    <a href="https://www.facebook.com/rasmus.mikaelsson.5/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
-                    <a href="https://www.instagram.com/umealogistikgrupp/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
-                </div>
-                <p class="maker">Gjord av <a href="https://www.instagram.com/rasmus.mikaelsson05/">Rasmus Mikaelsson</a></p>
-            </section>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./logo.png" alt="logo">
         </div>
+        <ul class="links">
+            <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
+            <li><a href="/fonsterputts-info">Bilder </a><i class="fa-regular fa-image" style="color: var(--main-color);"></i></li>
+            <li><a href="/hacktrimning-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
+            <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
+        </ul>
+        <div on:click={() => {openMenu(); setCross()}} class="toggle_btn">
+            <i class="fa-duotone fa-bars-sort" class:fa-xmark={replaceCross} />
+        </div>
+        <div style="z-index: 1000; position:absolute;" class="dropdown_menu" class:open={openBool}>
+            <ul>
+                <li><a style="color: black;" href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
+                <div class="blackline"></div>
+                <li><a href="/fonsterputts-info">Bilder <i class="fa-regular fa-image" style="color: var(--main-color);"></i></a></li>
+                <div class="blackline"></div>
+                <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
+                <div class="blackline"></div>
+                <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
+                <div class="blackline"></div>
+                <li><a href="/kontakta">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- <div style="z-index: 1000; position:absolute;" class="dropdown_menu fixed" class:open={openBool}>
+        <li><a href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
+        <li><a href="/fonsterputts-info">Bilder <i class="fa-regular fa-image" style="color: var(--main-color);"></i></a></li>
+        <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
+        <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
+        <li><a href="/kontakta">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
+    </div> -->
+    <div class="main-banner">
+        <h1>Välkommen till <br> Umeå Logistikgrupp <span id="big-text">AB</span> | Allt för <span id="big-text">Fastigheten</span></h1>
+    </div>
+    <div id="erbjudanden" class="erbjudande">
+        <section class="tjanst">
+            <h1 class="target-h1">Ett urval av våra <span>Tjänster</span></h1>
+            <p id="snabbt-om-oss">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo recusandae eveniet fugiat nihil vitae optio eaque corporis numquam. Perferendis!
+            </p>
+            <div class="red-line" id="red-line">
+                <span></span>
+            </div>
+            <div class="tjanst-container">
+                <div class="img-tjanster" style="background-image: url(./sandning-main.JPG);"></div>
+                <div class="tjanster">
+                    
+                        <h1>Sandning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
+                        <p>
+                        Vi erbjuder sandning av fastigheter, vägar etc..
+                        </p>
+                        <a href="/fonsterputts-info">Läs mer</a>
+                </div>
+                <div class="img-tjanster" style="background-image: url(./sopning-main.png);"></div>
+                <div class="tjanster">
+                    <h1>Sopning <i class="fa-duotone fa-broom" style="color: var(--main-color);"></i></h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
+                    </p>
+                    <a href="/hacktrimning-info">Läs mer</a>
+                </div>
+                <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
+                <div class="tjanster">
+                    <h1>Bemanning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
+                    <p>
+                        Vi erbjuder personal inom fastighetsskötsel till samtliga av våra tjänster för uthyrning.
+                    </p>
+                    <a href="/takskottning-info">Läs mer</a>
+                </div>
+                <div class="img-tjanster" style="background-image: url(./snorojning-main.JPG);"></div>
+                <div class="tjanster">
+                    <h1>Snöröjning <i class="fa-duotone fa-snowplow" style="color: var(--main-color);"></i></h1>
+                    <p>
+                        Vi tillhandahåller traktorer och personal för snöröjning av fastigheter, vägar etc.
+                    </p>
+                    <a href="/takskottning-info">Läs mer</a>
+                </div>
+                <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
+                <div class="tjanster">
+                    <h1>Transporter <i class="fa-duotone fa-truck-moving" style="color: var(--main-color);"></i></h1>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
+                    </p>
+                    <a href="/takskottning-info">Läs mer</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="butik-info">
+                <h1>Effektiv <span>Håltagningsprocess</span>, kvalitativa <span>Hydraulslangar</span>, lämpliga <span>Oljor</span> och <span>Smörjmedel</span>?</h1>
+                <p>Vi på UL Maskin och Diamant är <span>lösningen</span>!</p>
+            </div>
+            <div class="blue-line">
+                <span></span>
+            </div>
+            <div class="butik-container">
+                <div class="butik-img">
+                    <div class="butik-img-text">
+                        <h1><span>UL</span> Maskin och Diamant</h1>
+                        <p>Vi pressar dina hydralslangar, återförsäljare av Tyrolit samt att du även hittar dina oljor och smörjmedel från PAYBACK LUBRICANTS hos oss.</p>
+                        <a href="http://ulmaskinodiamant.se/" target="_blank">Besök vår butik!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="back-container">
+            <a href="/" class="back"><i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i> Till Toppen <i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i></a>
+        </div>
+        <section class="footer">
+            <h4>Följ oss på sociala medier!</h4>
+            <p>Se våra nyaste uppdateringar på FaceBook och Instagram</p>
+            <div class="sociala-medier">
+                <a href="https://www.facebook.com/rasmus.mikaelsson.5/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                <a href="https://www.instagram.com/umealogistikgrupp/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+            </div>
+            <p class="maker">Gjord av <a href="https://www.instagram.com/rasmus.mikaelsson05/">Rasmus Mikaelsson</a></p>
+        </section>
     </div>
 </main>
 
 <style>
-    main {
-        height: 100vh;
-        background: #000;
-        background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url("./banner-main.JPG");
-        background-size: cover;
-        
-    }
-
     li {
         list-style: none;
     }
@@ -156,19 +156,25 @@
         color: var(--main-color);
     }
 
-    /* Header */
-    header {
-        position: relative;
-        /* margin: 0 2rem; */
-        height: 100vh;
+    .navbar .logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 101;
+        height: fit-content;
+        width: 220px;
+    }
+
+    .logo img {
+        width: 120px;
+
     }
 
     .navbar {
         z-index: 100;
-        position: sticky;
-        top: 0;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(15px);
+        position: fixed;
+        background: #fff;
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
         width: 100%;
         height: 60px;
         padding: 0 2rem;
@@ -178,19 +184,18 @@
         justify-content: space-between;
     }
 
+    .navbar > .dropdown_menu {
+        backdrop-filter: blur(15px);
+    }
+
     .navbar li {
         float: left;
         position: relative;
         width: auto;
     }
 
-    .navbar .logo a {
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    .navbar .logo span {
-        color: var(--main-color);
+    .navbar .logo {
+        
     }
 
     .navbar .links {
@@ -199,37 +204,78 @@
     }
 
     .navbar .toggle_btn {
-        color: white;
         font-size: 1.5rem;
         cursor: pointer;
         display: none;
     }
+    /* Main banner */
+    .main-banner {
+        background: #000;
+        background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)), url("./banner-main.JPG");
+        background-size: cover;
+        height: 100vh;
+        padding: 50vh 10vw;
+    }
 
-    /* Dropdown Menu */
-    .dropdown_menu {
-        position: sticky;
-        display: none;
-        right: 2rem;
-        top: 80px;
-        width: 300px;
-        height: 0;
+    .main-banner h1 {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(15px);
         border-radius: 10px;
         overflow: hidden;
-        transition: all 0.2s ease;
+        padding: 20px;
+        color: white;
+        font-size: 42px;
+        font-weight: bold;
+        text-align: left;
+        margin: 10px 0;
+        max-width: fit-content;
     }
 
-    .dropdown_menu.open {
-        height: fit-content;
+    .main-banner #big-text {
+        color: var(--main-color);
+    }
+
+    /* Dropdown Menu */
+    .dropdown_menu {
+        background: #fff;
+        box-shadow:  0px 4px 3px 1px rgba(0, 0, 0, 0.362);
+        /* border-radius: 10px; */
+        margin: auto;
+        display: none;
+        right: 0;
+        top: 60px;
+        max-height: 0;
+        width: 100vw;
+        overflow: hidden;
+
+        transition: max-height 1s ease;
+    }
+
+    .dropdown_menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .dropdown_menu li {
-        position: sticky;
         padding: 0.7rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    }
+
+    .dropdown_menu li a {
+        color: #000;
+    }
+    .dropdown_menu.open {
+        max-height: 205.88px;
+    }
+
+    .blackline {
+        height: 1px;
+        width: 50vw;
+        background: rgba(128, 128, 128, 0.655);
+    }
+
+    .dropdown_menu li a {
+        text-align: center;
     }
 
     /* Tjänster Sektion */
@@ -330,29 +376,6 @@
     }
 
     /* About Section */
-    .about {
-        margin: 50vh 10vw 0;
-        padding: 0 25px;
-        margin-right: 500px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(15px);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .about-us h1,
-    .about-us #big-text {
-        color: white;
-        font-size: 42px;
-        font-weight: bold;
-        text-align: left;
-        margin: 10px 0;
-    }
-
-    .about-us #big-text {
-        color: var(--main-color);
-    }
-
     .butik-info span {
         color: var(--secondary-color);
     }
@@ -384,7 +407,7 @@
 
     .butik-container {
         background-color: #fef5ed;
-        padding: 0 15vw;
+        padding: 0 25vw;
     }
 
     .butik-img {
@@ -420,7 +443,7 @@
     .butik-img-text {
         background: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(15px);
-        margin: 50vh 20px;
+        margin: 60vh 20px;
         padding: 10px;
         border-radius: 10px;
     }
