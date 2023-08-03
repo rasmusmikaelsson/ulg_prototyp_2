@@ -773,25 +773,25 @@
     /* Keyframes */
 
     @keyframes transport-animation {
-            0% {
-                background-image: url("./specialtransport.png");
-            }
-            25% {
-                background-image: url("./IMG_E4086.png");
-            }
-            40% {
-                background-image: url("./IMG_E4086.png");
-            }
-            65% {
-                background-image: url("./IMG_E4088.png");
-            }
-            80% {
-                background-image: url("./IMG_E4088.png");
-            }
-            100% {
-                background-image: url("./specialtransport.png");
-            }
+        0% {
+            background-image: url("./specialtransport.png");
         }
+        25% {
+            background-image: url("./IMG_E4086.png");
+        }
+        40% {
+            background-image: url("./IMG_E4086.png");
+        }
+        65% {
+            background-image: url("./IMG_E4088.png");
+        }
+        80% {
+            background-image: url("./IMG_E4088.png");
+        }
+        100% {
+            background-image: url("./specialtransport.png");
+        }
+    }
 
 
 
