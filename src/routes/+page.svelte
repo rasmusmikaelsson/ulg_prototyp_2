@@ -22,7 +22,6 @@
         </div>
         <ul class="links">
             <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
-            <li><a href="/fonsterputts-info">Bilder </a><i class="fa-regular fa-image" style="color: var(--main-color);"></i></li>
             <li><a href="/hacktrimning-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
             <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
         </ul>
@@ -31,9 +30,8 @@
         </div>
         <div style="z-index: 1000; position:absolute;" class="dropdown_menu" class:open={openBool}>
             <ul>
+                <div class="long-devider"></div>
                 <li><a style="color: black;" href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
-                <div class="blackline"></div>
-                <li><a href="/fonsterputts-info">Bilder <i class="fa-regular fa-image" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
                 <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
@@ -63,14 +61,13 @@
                 <span></span>
             </div>
             <div class="tjanst-container">
-                <div class="img-tjanster" style="background-image: url(./sandning-main.JPG);"></div>
+                <div class="img-tjanster" style="background-image: url(./sandning-main.png);"></div>
                 <div class="tjanster">
-                    
-                        <h1>Sandning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
-                        <p>
-                        Vi erbjuder sandning av fastigheter, vägar etc..
-                        </p>
-                        <a href="/fonsterputts-info">Läs mer</a>
+                    <h1>Sandning <i class="fa-duotone fa-bars-staggered" style="color: var(--main-color);"></i></h1>
+                    <p>
+                    Vi erbjuder sandning av fastigheter, vägar etc..
+                    </p>
+                    <a href="/fonsterputts-info">Läs mer</a>
                 </div>
                 <div class="img-tjanster" style="background-image: url(./sopning-main.png);"></div>
                 <div class="tjanster">
@@ -80,7 +77,7 @@
                     </p>
                     <a href="/hacktrimning-info">Läs mer</a>
                 </div>
-                <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
+                <div class="img-tjanster" style="background-image: url(./specialtransport.png);"></div>
                 <div class="tjanster">
                     <h1>Bemanning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
                     <p>
@@ -96,7 +93,7 @@
                     </p>
                     <a href="/takskottning-info">Läs mer</a>
                 </div>
-                <div class="img-tjanster" style="background-image: url(./specialtransport.JPG);"></div>
+                <div class="img-tjanster specialtransport-animation" style="background-image: url(./specialtransport.JPG);"></div>
                 <div class="tjanster">
                     <h1>Transporter <i class="fa-duotone fa-truck-moving" style="color: var(--main-color);"></i></h1>
                     <p>
@@ -135,6 +132,7 @@
                 <a href="https://www.instagram.com/umealogistikgrupp/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
             </div>
             <p class="maker">Gjord av <a href="https://www.instagram.com/rasmus.mikaelsson05/">Rasmus Mikaelsson</a></p>
+            <p class="copyright">© 2023 Umeå Logistikgrupp AB – Alla rättigheter reserverade</p>
         </section>
     </div>
 </main>
@@ -166,8 +164,7 @@
     }
 
     .logo img {
-        width: 120px;
-
+        width: 150px;
     }
 
     .navbar {
@@ -176,7 +173,7 @@
         background: #fff;
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
         width: 100%;
-        height: 60px;
+        height: 80px;
         padding: 0 2rem;
         margin: 0 auto;
         display: flex;
@@ -194,13 +191,17 @@
         width: auto;
     }
 
-    .navbar .logo {
-        
-    }
-
     .navbar .links {
         display: flex;
         gap: 2.5rem;
+    }
+
+    .links a:hover {
+        color: var(--main-color);
+    }
+
+    .links a {
+        color: #000;
     }
 
     .navbar .toggle_btn {
@@ -215,7 +216,19 @@
         background-size: cover;
         height: 100vh;
         padding: 50vh 10vw;
+
+        background-repeat: no-repeat;
     }
+
+    /* @keyframes animate {
+        0% {
+            background-image: url("./specialtransport.JPG");
+            break-after: 1s;
+        }
+        100% {
+            background-image: url("./banner-main.JPG");
+        }
+    } */
 
     .main-banner h1 {
         background: rgba(255, 255, 255, 0.1);
@@ -236,10 +249,14 @@
     }
 
     /* Dropdown Menu */
+    .long-devider {
+        background: rgba(128, 128, 128, 0.655);
+        height: 1px;
+        width: 100vw;
+    }
     .dropdown_menu {
         background: #fff;
         box-shadow:  0px 4px 3px 1px rgba(0, 0, 0, 0.362);
-        /* border-radius: 10px; */
         margin: auto;
         display: none;
         right: 0;
@@ -247,7 +264,6 @@
         max-height: 0;
         width: 100vw;
         overflow: hidden;
-
         transition: max-height 1s ease;
     }
 
@@ -265,7 +281,7 @@
         color: #000;
     }
     .dropdown_menu.open {
-        max-height: 205.88px;
+        max-height: 164.5px;
     }
 
     .blackline {
@@ -338,6 +354,7 @@
     .tjanster {
         width: fit-content;
         transform: translateY(-40px);
+        box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
         margin: auto;
         padding: 25px;
         border-radius: 10px;
@@ -407,7 +424,7 @@
 
     .butik-container {
         background-color: #fef5ed;
-        padding: 0 25vw;
+        padding: 0 30vw;
     }
 
     .butik-img {
@@ -450,6 +467,10 @@
 
     .butik-img-text span {
         color: var(--secondary-color);
+    }
+
+    .butik-img-text h1 {
+        font-size: 32px;
     }
 
     .butik-img-text p {
@@ -507,6 +528,11 @@
         cursor: pointer;
         padding: 18px 10px;
     }
+
+    .copyright {
+        color: grey;
+        font-size: 12px;
+    }
     
     /* Invetrt sort icon */
     .fa-bars-sort {
@@ -518,12 +544,29 @@
 
     /* Responsivenes */
     @media (max-width: 992px) {
+        .navbar {
+            height: 60px;
+        }
+
         .navbar .links {
             display: none;
         }
 
         .navbar .toggle_btn {
             display: block;
+        }
+
+        .navbar .logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 101;
+            height: fit-content;
+            width: 220px;
+        }
+
+        .logo img {
+            width: 120px;
         }
 
         .dropdown_menu {
@@ -656,6 +699,10 @@
             color: var(--secondary-color);
         }
 
+        .butik-img-text h1 {
+            font-size: 24px;
+        }
+
         .butik-img-text p {
             margin: 10px 0 25px;
             font-size: medium;
@@ -700,6 +747,10 @@
             text-decoration: underline;
             color: var(--main-color);
         }
+
+        .copyright {
+            font-size: 12px;
+        }
     }
 
     :root {
@@ -707,4 +758,56 @@
         --background-color: #24262b;
         --secondary-color: rgb(0, 115, 255);
     }
+
+    /* Picture animations */
+    .specialtransport-animation {
+        animation-name: transport-animation;
+        animation-direction: alternate-reverse;
+        animation-duration: 14s; /* Adjust the duration as per your preference */
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+        animation-timing-function: ease-in-out;
+    }
+
+    /* Keyframes */
+
+    @keyframes transport-animation {
+            0% {
+                background-image: url("./specialtransport.png");
+            }
+            25% {
+                background-image: url("./IMG_E4086.png");
+            }
+            40% {
+                background-image: url("./IMG_E4086.png");
+            }
+            65% {
+                background-image: url("./IMG_E4088.png");
+            }
+            80% {
+                background-image: url("./IMG_E4088.png");
+            }
+            100% {
+                background-image: url("./specialtransport.png");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
