@@ -22,7 +22,7 @@
         </div>
         <ul class="links">
             <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
-            <li><a href="/hacktrimning-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
+            <li><a href="/tjanster-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
             <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
         </ul>
         <div on:click={() => {openMenu(); setCross()}} class="toggle_btn">
@@ -33,7 +33,7 @@
                 <div class="long-devider"></div>
                 <li><a style="color: black;" href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
-                <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
+                <li><a href="/tjanster-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
                 <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
@@ -41,65 +41,72 @@
             </ul>
         </div>
     </div>
-    <!-- <div style="z-index: 1000; position:absolute;" class="dropdown_menu fixed" class:open={openBool}>
-        <li><a href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
-        <li><a href="/fonsterputts-info">Bilder <i class="fa-regular fa-image" style="color: var(--main-color);"></i></a></li>
-        <li><a href="/hacktrimning-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
-        <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
-        <li><a href="/kontakta">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
-    </div> -->
     <div class="main-banner">
-        <h1>Välkommen till <br> Umeå Logistikgrupp <span id="big-text">AB</span> | Allt för <span id="big-text">Fastigheten</span></h1>
+        <div class="main-banner-container">
+            <div class="main-banner-container__text">
+                <h1>Umeå Logistikgrupp <span id="big-text">AB</span></h1>
+                <h3>Vi <a href="#transporter">Transporterar</a>, <a href="#snorojning">Snöröjer</a>, <a href="#sandning">Sandar</a>, <a href="#sopning">Sopar</a>, <a href="#bemanning">Bemannar</a> mm.</h3>
+            </div>
+            <div class="main-banner-container__buttons">
+                <a href="#vara-tjanster"><button class="button"><span>Våra Tjanster </span></button></a>
+                <a href="#kontakta-oss"><button class="button"><span>Kontakta </span></button></a>
+            </div>
+        </div>
     </div>
     <div id="erbjudanden" class="erbjudande">
-        <section class="tjanst">
+        <section id="vara-tjanster" class="tjanst">
             <h1 class="target-h1">Ett urval av våra <span>Tjänster</span></h1>
-            <p id="snabbt-om-oss">
+            <div class="scroll-to" id="transporter"></div>
+            <p class="target-p-tag">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nemo recusandae eveniet fugiat nihil vitae optio eaque corporis numquam. Perferendis!
             </p>
             <div class="red-line" id="red-line">
                 <span></span>
             </div>
             <div class="tjanst-container">
+                <div class="img-tjanster specialtransport-animation" style="background-image: url(./specialtransport.JPG);"></div>
+                <div class="tjanster">
+                    <h1>Transporter <i class="fa-duotone fa-truck-moving" style="color: var(--main-color);"></i></h1>
+                    <div class="scroll-to" id="snorojning"></div>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
+                    </p>
+                    <a href="#kontakta-oss">Få en Transportlösning</a>
+                </div>
+                <div class="img-tjanster" style="background-image: url(./snorojning-main.JPG);"></div>
+                <div class="tjanster">
+                    <h1>Snöröjning <i class="fa-duotone fa-snowplow" style="color: var(--main-color);"></i></h1>
+                    <div class="scroll-to" id="sandning"></div>
+                    <p>
+                        Vi tillhandahåller traktorer och personal för snöröjning av fastigheter, vägar etc.
+                    </p>
+                    <a href="#kontakta-oss">Kontakta oss</a>
+                </div>
                 <div class="img-tjanster" style="background-image: url(./sandning-main.png);"></div>
                 <div class="tjanster">
                     <h1>Sandning <i class="fa-duotone fa-bars-staggered" style="color: var(--main-color);"></i></h1>
+                    <div class="scroll-to" id="sopning"></div>
                     <p>
-                    Vi erbjuder sandning av fastigheter, vägar etc..
+                        Vi erbjuder sandning av fastigheter, vägar etc..
                     </p>
-                    <a href="/fonsterputts-info">Läs mer</a>
+                    <a href="#kontakta-oss">Kontakta oss</a>
                 </div>
                 <div class="img-tjanster" style="background-image: url(./sopning-main.png);"></div>
                 <div class="tjanster">
                     <h1>Sopning <i class="fa-duotone fa-broom" style="color: var(--main-color);"></i></h1>
+                    <div class="scroll-to" id="bemanning"></div>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
                     </p>
-                    <a href="/hacktrimning-info">Läs mer</a>
+                    <a href="#kontakta-oss">Kontakta oss</a>
                 </div>
-                <div class="img-tjanster" style="background-image: url(./specialtransport.png);"></div>
+                <div  class="img-tjanster" style="background-image: url(./specialtransport.png);"></div>
                 <div class="tjanster">
                     <h1>Bemanning <i class="fa-duotone fa-handshake-angle" style="color: var(--main-color);"></i></h1>
                     <p>
                         Vi erbjuder personal inom fastighetsskötsel till samtliga av våra tjänster för uthyrning.
                     </p>
-                    <a href="/takskottning-info">Läs mer</a>
-                </div>
-                <div class="img-tjanster" style="background-image: url(./snorojning-main.JPG);"></div>
-                <div class="tjanster">
-                    <h1>Snöröjning <i class="fa-duotone fa-snowplow" style="color: var(--main-color);"></i></h1>
-                    <p>
-                        Vi tillhandahåller traktorer och personal för snöröjning av fastigheter, vägar etc.
-                    </p>
-                    <a href="/takskottning-info">Läs mer</a>
-                </div>
-                <div class="img-tjanster specialtransport-animation" style="background-image: url(./specialtransport.JPG);"></div>
-                <div class="tjanster">
-                    <h1>Transporter <i class="fa-duotone fa-truck-moving" style="color: var(--main-color);"></i></h1>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia provident eligendi cum in ipsam esse.
-                    </p>
-                    <a href="/takskottning-info">Läs mer</a>
+                    <a href="#kontakta-oss">Kontakta oss</a>
                 </div>
             </div>
         </section>
@@ -120,6 +127,44 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section class="kontakta-oss">
+            <h1 id="kontakta-oss" class="target-h1">Kontakta <span id="kontakta-oss-span-text">Oss</span></h1>
+            <p class="target-p-tag">
+                Albins Telefonnummer: <a href="tel:073-800 23 43">073-800 23 43</a>
+            </p>
+            <div class="red-line" id="red-line">
+                <span></span>
+            </div>
+            <div class="container">
+                <form action="https://formsubmit.co/ralle.mikaelsson@hotmail.com" method="POST">
+                  <label for="fname">Namn/företag</label>
+                  <input type="text" id="name" name="Namn/företag" placeholder="" required>
+
+                  <label for="fname">E-post</label>
+                  <input type="text" id="e-post" name="E-post" placeholder="" required>
+
+                  <label for="fname">Telefonnummer</label>
+                  <input type="text" id="telefonnummer" name="Telefonnummer" placeholder="" required>
+              
+                  <label for="lname">Till (Vid val av transportlösning)</label>
+                  <input type="text" id="till" name="Till" placeholder="" optinal>
+
+                  <label for="lname">Från (Vid val av transportlösning)</label>
+                  <input type="text" id="fran" name="Från" placeholder="" optinal>
+              
+                  <!-- <label for="country">Country</label>
+                  <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select> -->
+              
+                  <label for="subject">Berätta om ditt ärende</label>
+                  <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
+                  <a href="#vara-tjanster"><button class="button" type="submit" value="submit"><span>Skicka </span></button></a>
+                </form>
+              </div>
         </section>
         <div class="back-container">
             <a href="/" class="back"><i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i> Till Toppen <i class="fa-solid fa-arrow-up" style="color: var(--main-color);"></i></a>
@@ -209,6 +254,21 @@
         cursor: pointer;
         display: none;
     }
+
+    .navbar ul li::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background-color: #ba1019;
+        display: block;
+        margin: auto;
+        margin-top: 2px;
+        transition: all 0.5s;
+    }
+
+    .navbar ul li:hover::after {
+        width: 100%;
+    }
     /* Main banner */
     .main-banner {
         background: #000;
@@ -216,36 +276,81 @@
         background-size: cover;
         height: 100vh;
         padding: 50vh 10vw;
-
-        background-repeat: no-repeat;
     }
 
-    /* @keyframes animate {
-        0% {
-            background-image: url("./specialtransport.JPG");
-            break-after: 1s;
-        }
-        100% {
-            background-image: url("./banner-main.JPG");
-        }
-    } */
+    .main-banner-container {
+        overflow: hidden;
+        margin: auto;
+        color: white;
+        text-align: center;
+        max-width: fit-content;
+    }
 
-    .main-banner h1 {
+    .main-banner-container__text {
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(15px);
         border-radius: 10px;
-        overflow: hidden;
         padding: 20px;
-        color: white;
-        font-size: 42px;
+    }
+
+    .main-banner-container__text h1 {
+        font-size: 52px;
         font-weight: bold;
-        text-align: left;
-        margin: 10px 0;
-        max-width: fit-content;
+        margin: 0 0 10px;
+    }
+
+    .main-banner-container__text h3 a {
+        text-decoration: underline;
+        font-size: 20px;
     }
 
     .main-banner #big-text {
         color: var(--main-color);
+    }
+
+    /* Buttons */
+    .main-banner-container__buttons {
+        display: flex;
+        justify-content: space-between;
+        margin: 25px 0 0;
+    }
+
+    .button {
+        border-radius: 4px;
+        background-color: var(--main-color);
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .button:hover span {
+        padding-right: 25px;
+    }
+
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
     }
 
     /* Dropdown Menu */
@@ -312,10 +417,15 @@
         color: var(--main-color);
     }
     
-    #snabbt-om-oss {
+    .target-p-tag {
         padding: 0 25px 50px;
         margin: 0 10vw;
         font-size: 18px;
+    }
+
+    .target-p-tag a {
+        color: var(--main-color);
+        text-decoration: underline;
     }
 
     .red-line {
@@ -367,8 +477,10 @@
     }
 
     .tjanster a {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
         color: var(--main-color);
-        /* max-width: 2px; */
     }
 
     .tjanster a::after {
@@ -378,12 +490,12 @@
         background-color: var(--main-color);
         display: block;
         transition: all 0.8s;
-        max-width: 56px;
+        margin: auto;
+        margin-top: 2px;
     }
 
     .tjanster a:hover::after {
         width: 100%;
-        max-width: 56px;
     }
 
     /* Erbjudande 100vh */
@@ -442,19 +554,26 @@
         overflow: hidden;
     }
 
+    .butik-img-text a {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        width: fit-content;
+    }
+
     .butik-img-text a::after {
         content: '';
         width: 0;
         height: 2px;
         background-color: var(--secondary-color);
         display: block;
+        margin: auto;
+        margin-top: 2px;
         transition: all 0.8s;
-        max-width: 145px;
     }
 
     .butik-img-text a:hover::after {
         width: 100%;
-        max-width: 145px;
     }
 
     .butik-img-text {
@@ -495,6 +614,45 @@
         color: var(--main-color);
     }
 
+    /* Contact Forms */
+    input[type=text], 
+    /* select,  */
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    .container {
+        width: 500px;
+        margin: auto;
+        margin-top: 25px;
+        border-radius: 5px;
+        background: url();
+        padding: 20px;
+    }
+
+    .button {
+        font-size: 18px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: auto;
+    }
+
+    form button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     /* Footer Design */
     .footer {
         background: #fef5ed;
@@ -506,12 +664,14 @@
 
     .footer h4 {
         margin-bottom: 25px;
+        font-size: 22px;
         font-weight: 600;
     }
 
     .footer .maker {
         margin: 25px 0;
         font-weight: bold;
+        padding: 0;
     }
 
     .footer a {
@@ -527,6 +687,7 @@
         margin: 0 13px;
         cursor: pointer;
         padding: 18px 10px;
+        font-size: 25px;
     }
 
     .copyright {
@@ -565,6 +726,31 @@
             width: 220px;
         }
 
+        .main-banner-container__text h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        .main-banner-container__text h3 {
+            font-size: 16px;
+        }
+
+        .main-banner-container__text h3 a {
+            text-decoration: underline;
+            font-size: 16px;
+        }
+
+        .main-banner-container__buttons {
+            display: flex;
+            flex-direction: column;
+            margin: 25px 0 0;
+        }
+
+        .main-banner-container__buttons a {
+            margin: 10px;
+        }
+
         .logo img {
             width: 120px;
         }
@@ -573,26 +759,10 @@
             display: block;
         }
 
-        .about {
-            margin: 55vh 2rem 0;
-        }
-        .about-us h1,
-        .about-us span {
-            color: white;
-            font-size: 25px;
-            text-align: left;
-            margin: 10px 0;
-        }
-
-        .about-us #big-text {
-            font-size: 26px;
-            color: var(--main-color);
-        }
 
         .target-h1 {
             text-align: center;
-            padding: 50px 75px 0;
-            padding-bottom: 25px;
+            padding: 50px 75px 25px;
         }
 
         .target-h1,
@@ -600,11 +770,10 @@
             font-size: 25px;
         }
 
-        .tjanst #snabbt-om-oss {
-            display: flex;
-            justify-content: center;
+        .target-p-tag {
             text-align: center;
-            margin: 0 10vw;
+            padding: 0 0 50px;
+            margin: 0 10vw; 
         }
 
         .red-line {
@@ -735,6 +904,28 @@
             width: 20%;
         }
 
+        input[type=text], 
+        /* select,  */
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        .container {
+            width: fit-content;
+            margin: auto;
+            margin-top: 25px;
+            border-radius: 5px;
+            background: url();
+            padding: 20px 10vw;
+        }
+
         .footer {
             margin-top: 25px;
         }
@@ -763,7 +954,7 @@
     .specialtransport-animation {
         animation-name: transport-animation;
         animation-direction: alternate-reverse;
-        animation-duration: 14s; /* Adjust the duration as per your preference */
+        animation-duration: 12s; /* Adjust the duration as per your preference */
         animation-fill-mode: forwards;
         animation-iteration-count: infinite;
         animation-play-state: running;
@@ -776,20 +967,23 @@
         0% {
             background-image: url("./specialtransport.png");
         }
-        25% {
+        16.67% {
             background-image: url("./IMG_E4086.png");
         }
-        40% {
+        33.3% {
             background-image: url("./IMG_E4086.png");
         }
-        65% {
+        49.93% {
             background-image: url("./IMG_E4088.png");
         }
-        80% {
+        66.53% {
             background-image: url("./IMG_E4088.png");
+        }
+        80.13% {
+            background-image: url("./specialtransport.png");
         }
         100% {
-            background-image: url("./specialtransport.png");
+            background-image: url("./specialtransport.png")
         }
     }
 
