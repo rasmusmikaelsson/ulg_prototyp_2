@@ -3,6 +3,7 @@
 </svelte:head>
 
 <script>
+    // Navbar logik
     let openBool = false;
     let replaceCross = false;
 
@@ -13,16 +14,31 @@
     function setCross() {
         replaceCross =! replaceCross;
     }
+
+    var prevScrollpos = window.pageYOffset;
+    
+    window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+        } else {
+            document.getElementById("navbar").style.top = "-80px";
+            openBool = false;
+            replaceCross = false;
+        }
+        prevScrollpos = currentScrollPos;
+    }
 </script>
 
 <main>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <div class="logo">
             <img src="./logo.png" alt="logo">
         </div>
         <ul class="links">
             <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
             <li><a href="/tjanster-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
+            <li><a href="https://www.instagram.com/umealogistikgrupp/" target="_blank">Bilder <i class="fa-brands fa-instagram fa-lg" style="color: var(--main-color);"></i></a></li>
             <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
         </ul>
         <div on:click={() => {openMenu(); setCross()}} class="toggle_btn">
@@ -34,6 +50,8 @@
                 <li><a style="color: black;" href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
                 <li><a href="/tjanster-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
+                <div class="blackline"></div>
+                <li><a href="https://www.instagram.com/umealogistikgrupp/" target="_blank">Bilder <i class="fa-brands fa-instagram fa-lg" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
                 <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
@@ -162,7 +180,7 @@
               
                   <label for="subject">Berätta om ditt ärende</label>
                   <textarea id="subject" name="subject" placeholder="" style="height:200px"></textarea>
-                  <a href="#vara-tjanster"><button class="button" type="submit" value="submit"><span>Skicka </span></button></a>
+                  <button class="button" type="submit" value="submit"><span>Skicka </span></button>
                 </form>
               </div>
         </section>
@@ -205,7 +223,6 @@
         justify-content: center;
         z-index: 101;
         height: fit-content;
-        width: 220px;
     }
 
     .logo img {
@@ -214,16 +231,19 @@
 
     .navbar {
         z-index: 100;
-        position: fixed;
         background: #fff;
         box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.362);
-        width: 100%;
         height: 80px;
         padding: 0 2rem;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        top: 0;
+        width: 100%;
+        position: fixed;
+        transition: top 0.3s;
     }
 
     .navbar > .dropdown_menu {
@@ -386,7 +406,7 @@
         color: #000;
     }
     .dropdown_menu.open {
-        max-height: 164.5px;
+        max-height: 226.88px;
     }
 
     .blackline {
@@ -723,7 +743,6 @@
             justify-content: center;
             z-index: 101;
             height: fit-content;
-            width: 220px;
         }
 
         .main-banner-container__text h1 {
