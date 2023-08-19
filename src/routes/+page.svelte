@@ -3,31 +3,38 @@
 </svelte:head>
 
 <script>
-    // Navbar logik
-    let openBool = false;
-    let replaceCross = false;
+  import { onMount } from "svelte";
 
-    function openMenu() {
-        openBool = !openBool;
-    }
+  // Navbar logik
 
-    function setCross() {
-        replaceCross =! replaceCross;
-    }
+  let openBool = false;
+  let replaceCross = false;
 
-    // var prevScrollpos = window.pageYOffset;
-    
-    // window.onscroll = function() {
-    //     var currentScrollPos = window.pageYOffset;
-    //     if (prevScrollpos > currentScrollPos) {
-    //         document.getElementById("navbar").style.top = "0";
-    //     } else {
-    //         document.getElementById("navbar").style.top = "-80px";
-    //         openBool = false;
-    //         replaceCross = false;
-    //     }
-    //     prevScrollpos = currentScrollPos;
-    // }
+  function openMenu() {
+    openBool = !openBool;
+  }
+
+  function setCross() {
+    replaceCross = !replaceCross;
+  }
+
+
+
+  onMount(() => {
+    var prevScrollpos = window.pageYOffset;
+
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else {
+        document.getElementById("navbar").style.top = "-80px";
+        openBool = false;
+        replaceCross = false;
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  });
 </script>
 
 <main>
@@ -37,9 +44,9 @@
         </div>
         <ul class="links">
             <li><a href="/">Hem </a><i class="fa-duotone fa-house" style="color: var(--main-color);"></i></li>
-            <li><a href="/tjanster-info">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
+            <li><a href="#vara-tjanster">Tjänster </a><i class="fa-solid fa-info" style="color: var(--main-color);"></i></li>
+            <li><a href="#kontakta-oss">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
             <li><a href="https://www.instagram.com/umealogistikgrupp/" target="_blank">Bilder <i class="fa-brands fa-instagram fa-lg" style="color: var(--main-color);"></i></a></li>
-            <li><a href="/kontakta">Kontakta </a><i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></li>
         </ul>
         <div on:click={() => {openMenu(); setCross()}} class="toggle_btn">
             <i class="fa-duotone fa-bars-sort" class:fa-xmark={replaceCross} />
@@ -49,13 +56,13 @@
                 <div class="long-devider"></div>
                 <li><a style="color: black;" href="/">Hem <i class="fa-duotone fa-house" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
-                <li><a href="/tjanster-info">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
+                <li><a href="#vara-tjanster">Tjänster <i class="fa-solid fa-info" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
-                <li><a href="https://www.instagram.com/umealogistikgrupp/" target="_blank">Bilder <i class="fa-brands fa-instagram fa-lg" style="color: var(--main-color);"></i></a></li>
+                <li><a href="#kontakta-oss">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
                 <li><a href="http://ulmaskinodiamant.se/" target="_blank">Butik <i class="fa-duotone fa-shop" style="color: var(--main-color);"></i></a></li>
                 <div class="blackline"></div>
-                <li><a href="/kontakta">Kontakta <i class="fa-duotone fa-phone" style="color: var(--main-color);"></i></a></li>
+                <li><a href="https://www.instagram.com/umealogistikgrupp/" target="_blank">Bilder <i class="fa-brands fa-instagram fa-lg" style="color: var(--main-color);"></i></a></li>
             </ul>
         </div>
     </div>
@@ -194,7 +201,7 @@
                 <a href="https://www.facebook.com/rasmus.mikaelsson.5/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
                 <a href="https://www.instagram.com/umealogistikgrupp/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
             </div>
-            <p class="maker">Gjord av <a href="https://www.instagram.com/rasmus.mikaelsson05/">Rasmus Mikaelsson</a></p>
+            <p class="maker">Gjord och Designad av <a href="https://www.instagram.com/rasmus.mikaelsson05/">Rasmus Mikaelsson</a></p>
             <p class="copyright">© 2023 Umeå Logistikgrupp AB – Alla rättigheter reserverade</p>
         </section>
     </div>
@@ -243,7 +250,7 @@
         top: 0;
         width: 100%;
         position: fixed;
-        transition: top 0.3s;
+        transition: top 0.4s;
     }
 
     .navbar > .dropdown_menu {
@@ -746,18 +753,18 @@
         }
 
         .main-banner-container__text h1 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: bold;
             margin: 0 0 10px;
         }
 
         .main-banner-container__text h3 {
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .main-banner-container__text h3 a {
             text-decoration: underline;
-            font-size: 16px;
+            font-size: 20px;
         }
 
         .main-banner-container__buttons {
